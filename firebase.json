@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "probandofirebase-a9522",
     "public": "public",
     "ignore": [
       "firebase.json",

@@ -330,15 +330,35 @@
     <!-- FORMULARIO -->
     <div class="container">
       <p class="text-center linea">Formulario de contacto</p>
-      <form class="form-contact" method="POST" action="correo.php">
+      <form class="form-contact" id="contacForm">
+        <!-- ALERT -->
+        <div
+          class="
+            alert alert-success alert-dismissible
+            fade
+            show
+            alertxd
+            text-center
+          "
+          role="alert"
+          id="alertxd"
+        >
+          <strong>MENSAJE ENVIADO</strong>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
         <div class="form-group">
           <label for="input">Nombre</label>
           <input
             type="text"
             class="form-control shadow"
             autocomplete="off"
-            id="input"
-            name="nombre"
+            id="name"
+            name="name"
             value
             required="required"
           />
@@ -349,7 +369,7 @@
             type="email"
             autocomplete="off"
             class="form-control shadow"
-            id="input2"
+            id="email"
             name="email"
             value
             required="required"
@@ -359,8 +379,8 @@
           <label for="textarea">Mensaje</label>
           <textarea
             class="form-control shadow"
-            name="mensaje"
-            id="textarea"
+            name="message"
+            id="message"
             autocomplete="off"
             rows="4"
             required="required"
@@ -372,6 +392,7 @@
       </form>
     </div>
     <br />
+
     <!-- FOOTER -->
     <footer>
       <div class="container">
@@ -404,18 +425,20 @@
     crossorigin="anonymous"
   ></script>
 
-  <!-- SCRIPTS -->
-
-  <script src="JS/scripts.js"></script>
-
   <!-- FIREBASE -->
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="/__/firebase/8.6.2/firebase-app.js"></script>
+  <!--<script src="/__/firebase/8.6.2/firebase-app.js"></script>
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="/__/firebase/8.6.2/firebase-analytics.js"></script>
+  <!--<script src="/__/firebase/8.6.2/firebase-analytics.js"></script>
 
   <!-- Initialize Firebase -->
-  <script src="/__/firebase/init.js"></script>
+  <!--<script src="/__/firebase/init.js"></script>-->
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+
+  <!-- SCRIPTS -->
+
+  <script src="JS/scripts.js"></script>
 </html>
